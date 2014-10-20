@@ -101,12 +101,14 @@
   <ItemGroup>
     <ClInclude Include="audio.h" />
     <ClInclude Include="constants.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="graphics.h" />
     <ClInclude Include="image.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="GroveMon.h" />
+    <ClInclude Include="Skill.h" />
     <ClInclude Include="textDX.h" />
     <ClInclude Include="textureManager.h" />
   </ItemGroup>
