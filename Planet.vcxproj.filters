@@ -45,6 +45,24 @@
     <ClCompile Include="GroveMon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fireM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="waterM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="grassM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="turtle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dinosaur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -81,6 +99,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Skill.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="waterM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fireM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grassM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lizard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="turtle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dinosaur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

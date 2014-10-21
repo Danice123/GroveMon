@@ -8,6 +8,10 @@
 #include "textureManager.h"
 #include "textDX.h"
 #include "audio.h"
+#include "lizard.h"
+#include "dinosaur.h"
+#include "turtle.h"
+
 
 class GroveMon : public Game {
 public:
@@ -25,5 +29,6 @@ public:
 private:
 	TextureManager* textures;
 	TextDX text;
+	Lizard testLizard;
 };
 #endif

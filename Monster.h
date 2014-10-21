@@ -3,11 +3,11 @@
 #include "Skill.h"
 #include <vector>
 
-enum type{WATER, GRASS, FIRE};
+enum type{WATER, GRASS, FIRE, NORMAL};
 
 class Monster {
 public:
-	Monster();
+	
 
 	virtual void damageMonster(int, type) = 0;
 
@@ -30,7 +30,7 @@ public:
 	void setSpeed(int i) { speed = i; }
 	void setCrit(int i) { crit = i; }
 	void setMana(int i) { mana = i; }
-
+	void modifyCurrentHealth(int i) {currentHealth = i;}
 	void modifyCurrentMana(int i) { currentMana = i; }
 private:
 	type creature_type;
