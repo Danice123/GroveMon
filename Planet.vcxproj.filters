@@ -23,26 +23,73 @@
     <ClCompile Include="Monster.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="audio.h" />
-    <ClInclude Include="BattleSystem.h" />
-    <ClInclude Include="constants.h" />
-    <ClInclude Include="dinosaur.h" />
-    <ClInclude Include="fireM.h" />
-    <ClInclude Include="grassM.h" />
-    <ClInclude Include="lizard.h" />
-    <ClInclude Include="Monster.h" />
-    <ClInclude Include="entity.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="graphics.h" />
-    <ClInclude Include="image.h" />
-    <ClInclude Include="input.h" />
-    <ClInclude Include="GroveMon.h" />
-    <ClInclude Include="Skill.h" />
-    <ClInclude Include="TestMonster.h" />
-    <ClInclude Include="textDX.h" />
-    <ClInclude Include="textureManager.h" />
-    <ClInclude Include="turtle.h" />
-    <ClInclude Include="waterM.h" />
-    <ClInclude Include="TestSkill.h" />
+    <ClInclude Include="audio.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleSystem.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="dinosaur.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="fireM.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="grassM.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="image.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GroveMon.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lizard.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMonster.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TestSkill.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="textDX.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="textureManager.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="turtle.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="waterM.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{a9e68ece-49df-45e0-9d14-5eacb969e638}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
