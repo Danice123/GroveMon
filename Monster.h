@@ -33,8 +33,8 @@ public:
 	void setSpeed(int i) { speed = i; }
 	void setCrit(int i) { crit = i; }
 	void setMana(int i) { mana = i; }
-	void modifyCurrentHealth(int i) {currentHealth = i;}
-	void modifyCurrentMana(int i) { currentMana = i; }
+	void modifyCurrentHealth(int i) {currentHealth += i;}
+	void modifyCurrentMana(int i) { currentMana += i; }
 
 	void addSkill(Skill*);
 	void addStatusEffect(Skill*);

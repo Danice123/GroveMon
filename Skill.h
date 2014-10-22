@@ -10,8 +10,10 @@ public:
 	virtual std::string describeTick(Monster* target) = 0;
 	virtual void tick(Monster*) = 0;
 	int getManaCost() { return manaCost; }
-private:
+	std::string getName() { return name; }
+protected:
 	int manaCost;
+	std::string name;
 };
 
 #endif

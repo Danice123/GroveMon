@@ -28,5 +28,6 @@ private:
 	TextDX text;
 	BattleSystem* bs;
 	std::string textbox;
+	int index;
 };
 #endif

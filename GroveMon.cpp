@@ -1,5 +1,6 @@
 #include "GroveMon.h"
 #include "TestMonster.h"
+#include "TestSkill.h"
 
 const std::string images[] = { "" };
 const int nTextures = 0;
@@ -7,9 +8,14 @@ const int nTextures = 0;
 GroveMon::GroveMon() {
 	textures = new TextureManager[nTextures];
 
-	bs = new BattleSystem(new test(), new test());
+	test* player = new test();
+	player->addSkill(new TestSkill());
+	player->addSkill(new TestSkill());
+
+	bs = new BattleSystem(player, new test());
 
 	textbox = "";
+	index = 0;
 }
 
 GroveMon::~GroveMon() {
@@ -31,6 +37,7 @@ void GroveMon::initialize(HWND hwnd) {
 	bs->start();
 }
 
+int manaOutTimer = 0;
 //=============================================================================
 // Update all game items
 //=============================================================================
@@ -47,9 +54,21 @@ void GroveMon::update() {
 		}
 		break;
 	case 2:
-		textbox = "Push an input key";
+		if (manaOutTimer > 0) {
+			textbox = "Your Monster doesn't have the mana for that!";
+			manaOutTimer--;
+		} else textbox = "Push an input key";
+
+		if (input->wasKeyPressed(VK_UP) && index > 0) index--;
+		if (input->wasKeyPressed(VK_DOWN) && index < bs->getPlayer()->getSkills().size()) index++;
+
 		if (input->wasKeyPressed(VK_SPACE) && !bs->accepted) {
-			bs->playerInput = 1;
+			if (index > 0 && bs->getPlayer()->getSkills()[index - 1]->getManaCost() > bs->getPlayer()->getCurrentMana()) {
+				manaOutTimer = 100;
+				break;
+			}
+
+			bs->playerInput = index + 1;
 			bs->accepted = true;
 			bs->cv.notify_one();
 		}
@@ -71,6 +90,7 @@ void GroveMon::collisions() {
 }
 
 #include <sstream>
+#include "Skill.h"
 //=============================================================================
 // Render game items
 //=============================================================================
@@ -86,8 +106,20 @@ void GroveMon::render()
 	s.str("");
 	s << "HP: " << bs->getPlayer()->getCurrentHealth() << '/' << bs->getPlayer()->getHealth();
 	text.print(s.str(), 350, 236);
+	s.str("");
+	s << "Mana: " << bs->getPlayer()->getCurrentMana() << '/' << bs->getPlayer()->getMana();
+	text.print(s.str(), 350, 272);
 
 	text.print(textbox, 0, 300);
+
+	if (bs->getState() == 2) {
+		std::vector<Skill*> skills = bs->getPlayer()->getSkills();
+		text.print("Attack", 40, 340);
+		for (int i = 0; i < skills.size(); i++) {
+			text.print("Use " + skills[i]->getName(), 40, 364 + i * 24);
+		}
+		text.print("-", 10, 340 + index * 24);
+	}
     graphics->spriteEnd();                  // end drawing sprites
 }
 

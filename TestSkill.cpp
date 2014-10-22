@@ -1,18 +1,22 @@
 #include "TestSkill.h"
 
-std::string describe(Monster* caster) {
-	caster->getAttack();
+TestSkill::TestSkill() {
+	name = "Test Skill";
+	manaCost = 5;
+}
+
+std::string TestSkill::describe(Monster* caster) {
+	return caster->getName() + " dances around for a bit";
+}
+
+void TestSkill::apply(Monster*) {
+
+}
+
+std::string TestSkill::describeTick(Monster* target) {
 	return "";
 }
 
-void apply(Monster*) {
-
-}
-
-std::string describeTick(Monster* target) {
-	return "";
-}
-
-void tick(Monster*) {
+void TestSkill::tick(Monster*) {
 
 }

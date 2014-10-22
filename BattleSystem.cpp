@@ -1,5 +1,6 @@
 #include "BattleSystem.h"
 #include <sstream>
+#include "Skill.h"
 
 BattleSystem::~BattleSystem() {
 	CloseHandle(handle);
@@ -43,7 +44,8 @@ unsigned __stdcall run(void* args) {
 		}
 
 		if (turn != 0) {
-			switch(getPlayerInput(bs, lk)) {
+			int c = getPlayerInput(bs, lk);
+			switch(c) {
 			case 1:
 				s.str("");
 				s << "The Player's " << bs->player->getName() << " attacks!";
@@ -57,7 +59,16 @@ unsigned __stdcall run(void* args) {
 				textOut(bs, lk, s.str());
 				break;
 			default:
-				//skill
+				Skill* skill = bs->player->getSkills()[c - 2];
+				s.str("");
+				s << "The Player's " << bs->player->getName() << " uses " << skill->getName() << "!";
+				textOut(bs, lk, s.str());
+
+				skill->apply(bs->enemy);
+
+				textOut(bs, lk, skill->describe(bs->player));
+
+				bs->player->modifyCurrentMana(-skill->getManaCost());
 				break;
 			}
 
