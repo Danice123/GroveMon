@@ -21,6 +21,12 @@
     <ClCompile Include="winmain.cpp" />
     <ClCompile Include="TestSkill.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="fireball.cpp" />
+    <ClCompile Include="wave.cpp" />
+    <ClCompile Include="buff.cpp" />
+    <ClCompile Include="weaken.cpp" />
+    <ClCompile Include="bolt.cpp" />
+    <ClCompile Include="restore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio.h">
@@ -84,6 +90,24 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="waterM.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="fireball.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="restore.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="bolt.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="weaken.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="buff.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="wave.h">
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>
