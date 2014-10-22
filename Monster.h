@@ -1,8 +1,9 @@
 #ifndef __Monster_
 #define __Monster_
-#include "Skill.h"
 #include <vector>
 #include <string>
+
+class Skill;
 
 enum type{WATER, GRASS, FIRE, NORMAL};
 
@@ -10,8 +11,8 @@ class Monster {
 public:
 	virtual void damageMonster(int, type) = 0;
 
-	Skill** getSkills() { return skills; }
-	Skill** getStatusEffects() { return statusEffects; }
+	std::vector<Skill*> getSkills() { return skills; }
+	std::vector<Skill*> getStatusEffects() { return statusEffects; }
 
 	std::string getName() { return name; }
 	type getType() { return creature_type; }
@@ -34,13 +35,14 @@ public:
 	void setMana(int i) { mana = i; }
 	void modifyCurrentHealth(int i) {currentHealth = i;}
 	void modifyCurrentMana(int i) { currentMana = i; }
+
+	void addSkill(Skill*);
+	void addStatusEffect(Skill*);
 protected:
 	std::string name;
 	type creature_type;
 	int attack, defense, health, speed, crit, mana, currentHealth, currentMana;
-	Skill** skills;
-	int nSkills;
-	Skill** statusEffects;
-	int nStatusEffects;
+	std::vector<Skill*> skills;
+	std::vector<Skill*> statusEffects;
 };
 #endif

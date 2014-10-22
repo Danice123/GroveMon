@@ -74,7 +74,7 @@ unsigned __stdcall run(void* args) {
 			s.str("");
 			s << "The Enemy's " << bs->enemy->getName() << " attacks!";
 			textOut(bs, lk, s.str());
-			gitgit
+
 			damage = bs->enemy->getAttack() - bs->player->getDefense();
 			bs->player->damageMonster(damage, bs->enemy->getType());
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -98,8 +98,10 @@
     <ClCompile Include="image.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="GroveMon.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="TestMonster.cpp" />
     <ClCompile Include="lizard.cpp" />
+    <ClCompile Include="TestSkill.cpp" />
     <ClCompile Include="textDX.cpp" />
     <ClCompile Include="textureManager.cpp" />
     <ClCompile Include="turtle.cpp" />
@@ -123,6 +125,7 @@
     <ClInclude Include="GroveMon.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="TestMonster.h" />
+    <ClInclude Include="TestSkill.h" />
     <ClInclude Include="textDX.h" />
     <ClInclude Include="textureManager.h" />
     <ClInclude Include="turtle.h" />
