@@ -4,13 +4,13 @@
 
 
 #include "Monster.h"
-#include "constants.h"
 
 
 class GrassM : public Monster
 {
 
 public:
+	GrassM() { creature_type = type::GRASS; }
 	void damageMonster(int,type);
 
 

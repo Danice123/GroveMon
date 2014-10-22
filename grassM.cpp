@@ -5,27 +5,18 @@ void GrassM::damageMonster(int damage, type damagetype)
 {
 	switch(damagetype)
 	{
-
 	case NORMAL:
-		{
-			 modifyCurrentHealth(getCurrentHealth() - damage);
-		}
+		modifyCurrentHealth(-damage);
+		break;
 	case FIRE:
-		{
-			 modifyCurrentHealth(getCurrentHealth() - (2*damage));
-		}
+		modifyCurrentHealth(-2*damage);
+		break;
 	case WATER:
-		{
-			 modifyCurrentHealth(getCurrentHealth() - (damage/2));
-		}
+		modifyCurrentHealth(-damage/2);
+		break;
 	case GRASS:
-		{
-			 modifyCurrentHealth(getCurrentHealth() - (damage/2));
-		}
-	default:
-		{
-
-		}
+		modifyCurrentHealth(-damage/2);
+		break;
 	}
 
 }

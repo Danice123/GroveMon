@@ -1,6 +1,7 @@
 #include "GroveMon.h"
-#include "TestMonster.h"
-#include "TestSkill.h"
+#include "lizard.h"
+#include "turtle.h"
+#include "fireball.h"
 
 const std::string images[] = { "" };
 const int nTextures = 0;
@@ -8,11 +9,10 @@ const int nTextures = 0;
 GroveMon::GroveMon() {
 	textures = new TextureManager[nTextures];
 
-	test* player = new test();
-	player->addSkill(new TestSkill());
-	player->addSkill(new TestSkill());
+	Lizard* player = new Lizard();
+	player->addSkill(new Fireball());
 
-	bs = new BattleSystem(player, new test());
+	bs = new BattleSystem(player, new Turtle());
 
 	textbox = "";
 	index = 0;

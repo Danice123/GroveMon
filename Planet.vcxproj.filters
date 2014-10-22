@@ -12,14 +12,12 @@
     <ClCompile Include="image.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="GroveMon.cpp" />
-    <ClCompile Include="TestMonster.cpp" />
     <ClCompile Include="lizard.cpp" />
     <ClCompile Include="textDX.cpp" />
     <ClCompile Include="textureManager.cpp" />
     <ClCompile Include="turtle.cpp" />
     <ClCompile Include="waterM.cpp" />
     <ClCompile Include="winmain.cpp" />
-    <ClCompile Include="TestSkill.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="fireball.cpp" />
     <ClCompile Include="wave.cpp" />
@@ -72,12 +70,6 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="Skill.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="TestMonster.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="TestSkill.h">
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="textDX.h">
