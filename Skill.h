@@ -9,9 +9,13 @@ public:
 	virtual void apply(Monster*) = 0;
 	virtual std::string describeTick(Monster* target) = 0;
 	virtual void tick(Monster*) = 0;
+	
 	int getManaCost() { return manaCost; }
-private:
+	
+	int getTurns() { return turns; }
+protected:
 	int manaCost;
+	int turns;
 };
 
 #endif

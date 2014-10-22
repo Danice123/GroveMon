@@ -89,8 +89,11 @@
   <ItemGroup>
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="BattleSystem.cpp" />
+    <ClCompile Include="bolt.cpp" />
+    <ClCompile Include="buff.cpp" />
     <ClCompile Include="dinosaur.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="fireball.cpp" />
     <ClCompile Include="fireM.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="graphics.cpp" />
@@ -99,6 +102,7 @@
     <ClCompile Include="input.cpp" />
     <ClCompile Include="GroveMon.cpp" />
     <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="restore.cpp" />
     <ClCompile Include="TestMonster.cpp" />
     <ClCompile Include="lizard.cpp" />
     <ClCompile Include="TestSkill.cpp" />
@@ -106,13 +110,18 @@
     <ClCompile Include="textureManager.cpp" />
     <ClCompile Include="turtle.cpp" />
     <ClCompile Include="waterM.cpp" />
+    <ClCompile Include="wave.cpp" />
+    <ClCompile Include="weaken.cpp" />
     <ClCompile Include="winmain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio.h" />
     <ClInclude Include="BattleSystem.h" />
+    <ClInclude Include="bolt.h" />
+    <ClInclude Include="buff.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="dinosaur.h" />
+    <ClInclude Include="fireball.h" />
     <ClInclude Include="fireM.h" />
     <ClInclude Include="grassM.h" />
     <ClInclude Include="lizard.h" />
@@ -123,6 +132,7 @@
     <ClInclude Include="image.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="GroveMon.h" />
+    <ClInclude Include="restore.h" />
     <ClInclude Include="Skill.h" />
     <ClInclude Include="TestMonster.h" />
     <ClInclude Include="TestSkill.h" />
@@ -130,6 +140,8 @@
     <ClInclude Include="textureManager.h" />
     <ClInclude Include="turtle.h" />
     <ClInclude Include="waterM.h" />
+    <ClInclude Include="wave.h" />
+    <ClInclude Include="weaken.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
