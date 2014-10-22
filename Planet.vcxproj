@@ -103,9 +103,7 @@
     <ClCompile Include="GroveMon.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="restore.cpp" />
-    <ClCompile Include="TestMonster.cpp" />
     <ClCompile Include="lizard.cpp" />
-    <ClCompile Include="TestSkill.cpp" />
     <ClCompile Include="textDX.cpp" />
     <ClCompile Include="textureManager.cpp" />
     <ClCompile Include="turtle.cpp" />
@@ -134,8 +132,6 @@
     <ClInclude Include="GroveMon.h" />
     <ClInclude Include="restore.h" />
     <ClInclude Include="Skill.h" />
-    <ClInclude Include="TestMonster.h" />
-    <ClInclude Include="TestSkill.h" />
     <ClInclude Include="textDX.h" />
     <ClInclude Include="textureManager.h" />
     <ClInclude Include="turtle.h" />

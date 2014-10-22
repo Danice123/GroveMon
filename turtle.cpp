@@ -1,17 +1,14 @@
 #include "turtle.h"
 
-Turtle::Turtle() 
+Turtle::Turtle() : WaterM()
 {
-	setAttack(5);
-	setDefense(5);
-	setSpeed(5);
-	setHealth(5);
-	setCrit(5);
-	setMana(5);
-	modifyCurrentHealth(getHealth());
-	modifyCurrentMana(getMana());
-
-
-
-
+	name = "Turtle";
+	attack = 5;
+	defense = 5;
+	speed = 5;
+	health = 5;
+	crit = 5;
+	mana = 5;
+	currentHealth = health;
+	currentMana = mana;
 }
