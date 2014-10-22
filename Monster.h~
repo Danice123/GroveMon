@@ -8,6 +8,11 @@ enum type{WATER, GRASS, FIRE, NORMAL};
 
 class Monster {
 public:
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 558524ede9ccd47370557c0ee9c3579a647036c0
 	virtual void damageMonster(int, type) = 0;
 
 	Skill** getSkills() { return skills; }
