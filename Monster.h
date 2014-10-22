@@ -2,17 +2,19 @@
 #define __Monster_
 #include "Skill.h"
 #include <vector>
+#include <string>
 
 enum type{WATER, GRASS, FIRE};
 
 class Monster {
 public:
-	Monster();
-
 	virtual void damageMonster(int, type) = 0;
 
-	std::vector<Skill> getSkills() { return skills; }
-	std::vector<Skill> getStatusEffects() { return statusEffects; }
+	Skill** getSkills() { return skills; }
+	Skill** getStatusEffects() { return statusEffects; }
+
+	std::string getName() { return name; }
+	type getType() { return creature_type; }
 
 	int getAttack() { return attack; }
 	int getDefense() { return defense; }
@@ -32,10 +34,13 @@ public:
 	void setMana(int i) { mana = i; }
 
 	void modifyCurrentMana(int i) { currentMana = i; }
-private:
+protected:
+	std::string name;
 	type creature_type;
 	int attack, defense, health, speed, crit, mana, currentHealth, currentMana;
-	std::vector<Skill> skills;
-	std::vector<Skill> statusEffects;
+	Skill** skills;
+	int nSkills;
+	Skill** statusEffects;
+	int nStatusEffects;
 };
 #endif

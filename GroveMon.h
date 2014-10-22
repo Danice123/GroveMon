@@ -8,6 +8,7 @@
 #include "textureManager.h"
 #include "textDX.h"
 #include "audio.h"
+#include "BattleSystem.h"
 
 class GroveMon : public Game {
 public:
@@ -25,5 +26,8 @@ public:
 private:
 	TextureManager* textures;
 	TextDX text;
+
+	BattleSystem* bs;
+	std::string textbox;
 };
 #endif
