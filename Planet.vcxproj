@@ -89,7 +89,7 @@
   <ItemGroup>
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="BattleSystem.cpp" />
-    <ClCompile Include="bolt.cpp" />
+    <ClCompile Include="leafcut.cpp" />
     <ClCompile Include="buff.cpp" />
     <ClCompile Include="dinosaur.cpp" />
     <ClCompile Include="entity.cpp" />
@@ -117,7 +117,7 @@
   <ItemGroup>
     <ClInclude Include="audio.h" />
     <ClInclude Include="BattleSystem.h" />
-    <ClInclude Include="bolt.h" />
+    <ClInclude Include="leafcut.h" />
     <ClInclude Include="buff.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="dinosaur.h" />

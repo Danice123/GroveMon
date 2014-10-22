@@ -1,3 +1,5 @@
+#ifndef _BUFF_H
+#define _BUFF_H
 #include "Skill.h"
 #include <string>
 
@@ -11,3 +13,6 @@ public:
 private:
 
 };
+
+
+#endif

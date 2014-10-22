@@ -1,4 +1,6 @@
 #include "Skill.h"
+#ifndef _RESTORE_H
+#define _RESTORE_H
 #include <string>
 
 class Restore : public Skill {
@@ -11,3 +13,5 @@ public:
 private:
 
 };
+
+#endif

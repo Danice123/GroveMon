@@ -1,9 +1,13 @@
+#ifndef _LeafCut_H
+#define _LeafCut_H
+
+
 #include "Skill.h"
 #include <string>
 
-class Bolt : public Skill {
+class LeafCut : public Skill {
 public:
-	Bolt();
+	LeafCut();
 	std::string describe(Monster* caster);
 	void apply(Monster*);
 	std::string describeTick(Monster* target);
@@ -11,3 +15,4 @@ public:
 private:
 
 };
+#endif 

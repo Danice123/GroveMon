@@ -5,7 +5,7 @@
 
 class Skill;
 
-enum type{WATER, GRASS, FIRE, NORMAL,ELECTRIC};
+enum type{WATER, GRASS, FIRE, NORMAL};
 
 class Monster {
 public:

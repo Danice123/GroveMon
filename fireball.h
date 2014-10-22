@@ -1,3 +1,5 @@
+#ifndef _FIREBALL_H
+#define _FIREBALL_H
 #include "Skill.h"
 #include <string>
 
@@ -11,3 +13,5 @@ public:
 private:
 
 };
+
+#endif
