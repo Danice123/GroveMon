@@ -13,25 +13,29 @@
 const std::string images[] = { "pics/blastoise.png", "pics/ven.png", "pics/charizard.png", "pics/background.png", "pics/box.png" };
 const int nTextures = 5;
 
+Lizard* lizard;
+Turtle* turtle;
+Dinosaur* dino;
+
 GroveMon::GroveMon() {
 	textures = new TextureManager[nTextures];
 
-	Lizard* lizard = new Lizard();
+	lizard = new Lizard();
 	lizard->addSkill(new Fireball());
 	lizard->addSkill(new AxeTwerk());
 
-	Turtle* turtle = new Turtle();
+	turtle = new Turtle();
 	turtle->addSkill(new Wave());
 	turtle->addSkill(new leer());
 
 
-	Dinosaur* dino = new Dinosaur();
+	dino = new Dinosaur();
 	dino->addSkill(new LeafCut());
 	dino->addSkill(new Restore());
 
 
-	bs = new BattleSystem(lizard, dino);
-
+	
+	selected = false;
 	textbox = "";
 	index = 0;
 }
@@ -60,8 +64,6 @@ void GroveMon::initialize(HWND hwnd) {
 	textBoxBack.setX(0);
 	textBoxBack.setY(290);
 	textBoxBack.setScale(GAME_WIDTH / textBoxBack.getWidth());
-
-	bs->start();
 }
 
 int manaOutTimer = 0;
@@ -69,7 +71,30 @@ int manaOutTimer = 0;
 // Update all game items
 //=============================================================================
 void GroveMon::update() {
-	
+	if(!selected)
+	{
+		if (input->wasKeyPressed(VK_UP) && index > 0) index--;
+		if (input->wasKeyPressed(VK_DOWN) && index < 2) index++;
+
+		if (input->wasKeyPressed(VK_SPACE) ) {
+			if (index == 0)
+			{
+				bs = new BattleSystem(lizard, dino);
+			}
+			else if (index == 1)
+			{
+				bs = new BattleSystem(dino, turtle);
+			}
+			else if (index == 2)
+			{
+				bs = new BattleSystem(turtle, lizard);
+			}	
+			index = 0;
+			selected = true;
+			bs->start();
+		}
+		return;
+	}
 	switch(bs->getState()) {
 	case 0:
 		textbox = "";
