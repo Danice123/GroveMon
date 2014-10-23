@@ -78,8 +78,10 @@ unsigned __stdcall run(void* args) {
 			for (auto i = se->begin(); i < se->end(); i++) {
 				(*i)->tick(bs->player);
 				textOut(bs, lk, (*i)->describeTick(bs->player));
-				if ((*i)->getTurns() <= 0) se->erase(i);
-				if (se->size() == 0) break;
+				if ((*i)->getTurns() <= 0) {
+					se->erase(i);
+					break;
+				}
 			}
 
 			if (bs->enemy->getCurrentHealth() == 0) {
@@ -108,8 +110,10 @@ unsigned __stdcall run(void* args) {
 			for (auto i = se->begin(); i < se->end(); i++) {
 				(*i)->tick(bs->enemy);
 				textOut(bs, lk, (*i)->describeTick(bs->enemy));
-				if ((*i)->getTurns() <= 0) se->erase(i);
-				if (se->size() == 0) break;
+				if ((*i)->getTurns() <= 0) {
+					se->erase(i);
+					break;
+				}
 			}
 
 			if (bs->player->getCurrentHealth() == 0) {

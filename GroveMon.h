@@ -30,5 +30,8 @@ private:
 	std::string textbox;
 	int index;
 	bool selected;
+
+	Image background;
+	Image textBoxBack;
 };
 #endif

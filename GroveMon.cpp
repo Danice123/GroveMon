@@ -10,8 +10,8 @@
 #include "leer.h"
 #include "restore.h"
 
-const std::string images[] = { "" };
-const int nTextures = 0;
+const std::string images[] = { "pics/blastoise.png", "pics/ven.png", "pics/charizard.png", "pics/background.png", "pics/box.png" };
+const int nTextures = 5;
 
 GroveMon::GroveMon() {
 	textures = new TextureManager[nTextures];
@@ -51,6 +51,15 @@ void GroveMon::initialize(HWND hwnd) {
 			throw(GameError(gameErrorNS::FATAL_ERROR, "Error initializing texture"));
 	}
 	text.initialize(graphics, 24, false, false, "Cambria");
+
+	background.initialize(graphics, 0, 0, 0, &textures[3]);
+	background.setX(0);
+	background.setY(0);
+
+	textBoxBack.initialize(graphics, 0, 0, 0, &textures[4]);
+	textBoxBack.setX(0);
+	textBoxBack.setY(290);
+	textBoxBack.setScale(GAME_WIDTH / textBoxBack.getWidth());
 
 	bs->start();
 }
@@ -127,6 +136,9 @@ void GroveMon::render()
 
 	std::stringstream s;
     graphics->spriteBegin();                // begin drawing sprites
+	background.draw();
+	textBoxBack.draw();
+
 	text.print(bs->getEnemy()->getName(), 0, 0);
 	s << "HP: " << bs->getEnemy()->getCurrentHealth() << '/' << bs->getEnemy()->getHealth();
 	text.print(s.str(), 0, 36);
@@ -139,7 +151,7 @@ void GroveMon::render()
 	s << "Mana: " << bs->getPlayer()->getCurrentMana() << '/' << bs->getPlayer()->getMana();
 	text.print(s.str(), 350, 272);
 
-	text.print(textbox, 0, 300);
+	text.print(textbox, 40, 300);
 
 	if (bs->getState() == 2) {
 		std::vector<Skill*> skills = bs->getPlayer()->getSkills();
