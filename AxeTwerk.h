@@ -1,6 +1,6 @@
-#include "buff.h";
+#include "Skill.h"
 
-class AxeTwerk : public Buff{
+class AxeTwerk : public Skill {
 public:
 	AxeTwerk();
 	std::string describe(Monster* caster);

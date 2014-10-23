@@ -21,8 +21,6 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="fireball.cpp" />
     <ClCompile Include="wave.cpp" />
-    <ClCompile Include="buff.cpp" />
-    <ClCompile Include="weaken.cpp" />
     <ClCompile Include="restore.cpp" />
     <ClCompile Include="leafcut.cpp" />
     <ClCompile Include="Axe Twerk.cpp" />
@@ -92,12 +90,6 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="restore.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="weaken.h">
-      <Filter>headers</Filter>
-    </ClInclude>
-    <ClInclude Include="buff.h">
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="wave.h">

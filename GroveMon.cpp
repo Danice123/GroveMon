@@ -5,6 +5,10 @@
 
 #include "fireball.h"
 #include "leafcut.h"
+#include "wave.h"
+#include "AxeTwerk.h"
+#include "leer.h"
+#include "restore.h"
 
 const std::string images[] = { "" };
 const int nTextures = 0;
@@ -12,11 +16,21 @@ const int nTextures = 0;
 GroveMon::GroveMon() {
 	textures = new TextureManager[nTextures];
 
-	Lizard* player = new Lizard();
-	player->addSkill(new Fireball());
-	player->addSkill(new LeafCut());
+	Lizard* lizard = new Lizard();
+	lizard->addSkill(new Fireball());
+	lizard->addSkill(new AxeTwerk());
 
-	bs = new BattleSystem(player, new Dinosaur());
+	Turtle* turtle = new Turtle();
+	turtle->addSkill(new Wave());
+	turtle->addSkill(new leer());
+
+
+	Dinosaur* dino = new Dinosaur();
+	dino->addSkill(new LeafCut());
+	dino->addSkill(new Restore());
+
+
+	bs = new BattleSystem(lizard, dino);
 
 	textbox = "";
 	index = 0;

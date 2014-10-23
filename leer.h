@@ -1,5 +1,5 @@
-#ifndef _LeafCut_H
-#define _LeafCut_H
+#ifndef _Leer_H
+#define _Leer_H
 
 
 #include "Skill.h"

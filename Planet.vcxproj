@@ -90,7 +90,6 @@
     <ClCompile Include="audio.cpp" />
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="leafcut.cpp" />
-    <ClCompile Include="buff.cpp" />
     <ClCompile Include="dinosaur.cpp" />
     <ClCompile Include="entity.cpp" />
     <ClCompile Include="fireball.cpp" />
@@ -111,7 +110,6 @@
     <ClCompile Include="turtle.cpp" />
     <ClCompile Include="waterM.cpp" />
     <ClCompile Include="wave.cpp" />
-    <ClCompile Include="weaken.cpp" />
     <ClCompile Include="winmain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -119,7 +117,6 @@
     <ClInclude Include="AxeTwerk.h" />
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="leafcut.h" />
-    <ClInclude Include="buff.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="dinosaur.h" />
     <ClInclude Include="fireball.h" />
@@ -141,7 +138,6 @@
     <ClInclude Include="turtle.h" />
     <ClInclude Include="waterM.h" />
     <ClInclude Include="wave.h" />
-    <ClInclude Include="weaken.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
