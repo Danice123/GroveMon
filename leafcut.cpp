@@ -2,7 +2,9 @@
 
 LeafCut::LeafCut()
 {
-		
+	manaCost = 5;
+	turns = 1;
+	name = "LeafCut";
 }
 
 std::string LeafCut::describe(Monster* caster) {
