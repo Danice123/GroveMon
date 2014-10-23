@@ -29,5 +29,6 @@ private:
 	BattleSystem* bs;
 	std::string textbox;
 	int index;
+	bool selected;
 };
 #endif
