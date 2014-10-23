@@ -52,6 +52,7 @@ unsigned __stdcall run(void* args) {
 				textOut(bs, lk, s.str());
 	
 				damage = bs->player->getAttack() - bs->enemy->getDefense();
+				if (damage < 0) damage = 0;
 				bs->enemy->damageMonster(damage, bs->player->getType());
 
 				s.str("");
@@ -64,12 +65,21 @@ unsigned __stdcall run(void* args) {
 				s << "The Player's " << bs->player->getName() << " uses " << skill->getName() << "!";
 				textOut(bs, lk, s.str());
 
-				skill->apply(bs->enemy);
+				if (skill->getTargetsSelf()) skill->apply(bs->player);
+				else skill->apply(bs->enemy);
 
 				textOut(bs, lk, skill->describe(bs->player));
 
 				bs->player->modifyCurrentMana(-skill->getManaCost());
 				break;
+			}
+
+			std::vector<Skill*>* se = bs->player->getStatusEffects();
+			for (auto i = se->begin(); i < se->end(); i++) {
+				(*i)->tick(bs->player);
+				textOut(bs, lk, (*i)->describeTick(bs->player));
+				if ((*i)->getTurns() <= 0) se->erase(i);
+				if (se->size() == 0) break;
 			}
 
 			if (bs->enemy->getCurrentHealth() == 0) {
@@ -87,11 +97,20 @@ unsigned __stdcall run(void* args) {
 			textOut(bs, lk, s.str());
 
 			damage = bs->enemy->getAttack() - bs->player->getDefense();
+			if (damage < 0) damage = 0;
 			bs->player->damageMonster(damage, bs->enemy->getType());
 
 			s.str("");
 			s << "The Player's " << bs->player->getName() << " takes " << damage << " damage!";
 			textOut(bs, lk, s.str());
+
+			std::vector<Skill*>* se = bs->enemy->getStatusEffects();
+			for (auto i = se->begin(); i < se->end(); i++) {
+				(*i)->tick(bs->enemy);
+				textOut(bs, lk, (*i)->describeTick(bs->enemy));
+				if ((*i)->getTurns() <= 0) se->erase(i);
+				if (se->size() == 0) break;
+			}
 
 			if (bs->player->getCurrentHealth() == 0) {
 				textOut(bs, lk, "You are defeated!");

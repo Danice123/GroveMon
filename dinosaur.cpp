@@ -3,12 +3,12 @@
 Dinosaur::Dinosaur() : GrassM()
 {
 	name = "Dinosaur";
-	attack = 5;
-	defense = 5;
-	speed = 5;
-	health = 5;
+	attack = 9;
+	defense = 4;
+	speed = 4;
+	health = 100;
 	crit = 5;
-	mana = 5;
+	mana = 20;
 	currentHealth = health;
 	currentMana = mana;
 }

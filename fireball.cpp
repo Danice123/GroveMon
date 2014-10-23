@@ -3,6 +3,8 @@
 Fireball::Fireball() {
 	name = "Fireball";
 	manaCost = 5;
+	targetsSelf = false;
+	turns = 2;
 }
 
 std::string Fireball::describe(Monster* caster) {
@@ -11,12 +13,14 @@ std::string Fireball::describe(Monster* caster) {
 
 void Fireball::apply(Monster* target) {
 	target->damageMonster(5, type::FIRE);
+	target->addStatusEffect(this);
 }
 
 std::string Fireball::describeTick(Monster* target) {
-	return "";
+	return target->getName() + " is on FIRE!";
 }
 
 void Fireball::tick(Monster* target) {
-
+	turns--;
+	target->damageMonster(1, type::FIRE);
 }

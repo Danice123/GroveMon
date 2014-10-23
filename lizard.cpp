@@ -3,12 +3,12 @@
 Lizard::Lizard() : FireM()
 {
 	name = "Lizard";
-	attack = 6;
-	defense = 5;
-	speed = 5;
-	health = 5;
+	attack = 10;
+	defense = 3;
+	speed = 6;
+	health = 100;
 	crit = 5;
-	mana = 5;
+	mana = 20;
 	currentHealth = health;
 	currentMana = mana;
 }

@@ -13,10 +13,12 @@ public:
 	int getManaCost() { return manaCost; }
 	std::string getName() { return name; }
 	int getTurns() { return turns; }
+	bool getTargetsSelf() { return targetsSelf; }
 protected:
 	int manaCost;
 	std::string name;
 	int turns;
+	bool targetsSelf;
 };
 
 #endif

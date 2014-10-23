@@ -2,12 +2,13 @@
 
 LeafCut::LeafCut()
 {
-
+	manaCost = 5;
+	name = "Leaf Cut";
+	targetsSelf = false;
 }
 
 std::string LeafCut::describe(Monster* caster) {
-	caster->getAttack();
-	return "";
+	return caster->getName() + " shoots leaves at the opponent!";
 }
 
 void LeafCut::apply(Monster* target) {

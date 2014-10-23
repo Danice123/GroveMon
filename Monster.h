@@ -12,7 +12,7 @@ public:
 	virtual void damageMonster(int, type) = 0;
 
 	std::vector<Skill*> getSkills() { return skills; }
-	std::vector<Skill*> getStatusEffects() { return statusEffects; }
+	std::vector<Skill*>* getStatusEffects() { return &statusEffects; }
 
 	std::string getName() { return name; }
 	type getType() { return creature_type; }
