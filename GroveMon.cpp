@@ -114,6 +114,16 @@ void GroveMon::collisions() {
 //=============================================================================
 void GroveMon::render()
 {
+	if (!selected) {
+		graphics->spriteBegin(); 
+		text.print("Choose Lizard", 40, 100);
+		text.print("Choose Dinosaur", 40, 124);
+		text.print("Choose Turtle", 40, 148);
+		text.print("-", 20, 100 + index * 24);
+		graphics->spriteEnd();
+		return;
+	}
+
 	std::stringstream s;
     graphics->spriteBegin();                // begin drawing sprites
 	text.print(bs->getEnemy()->getName(), 0, 0);
