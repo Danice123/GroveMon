@@ -2,7 +2,7 @@
 
 LeafCut::LeafCut()
 {
-
+		
 }
 
 std::string LeafCut::describe(Monster* caster) {

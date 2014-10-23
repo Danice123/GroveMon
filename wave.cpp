@@ -6,7 +6,7 @@ std::string Wave::describe(Monster* caster) {
 }
 
 void Wave::apply(Monster* target) {
-	
+	target->damageMonster(5,WATER);
 }
 
 std::string Wave::describeTick(Monster* target) {
