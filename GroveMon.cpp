@@ -60,6 +60,7 @@ int manaOutTimer = 0;
 // Update all game items
 //=============================================================================
 void GroveMon::update() {
+	
 	switch(bs->getState()) {
 	case 0:
 		textbox = "";
