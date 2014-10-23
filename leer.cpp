@@ -14,7 +14,7 @@ std::string leer::describe(Monster* caster){
 	return caster->getName() + " used leer. Opponents defense decreased by 2";
 }
 std::string leer::describeTick(Monster* target){
-	return "";
+	return target->getName() + " is still effected by the leer";
 }
 
 void leer::tick(Monster* target){

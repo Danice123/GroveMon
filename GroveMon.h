@@ -33,5 +33,8 @@ private:
 
 	Image background;
 	Image textBoxBack;
+	Image liz;
+	Image din;
+	Image tur;
 };
 #endif

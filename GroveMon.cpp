@@ -64,6 +64,18 @@ void GroveMon::initialize(HWND hwnd) {
 	textBoxBack.setX(0);
 	textBoxBack.setY(290);
 	textBoxBack.setScale(GAME_WIDTH / textBoxBack.getWidth());
+
+	liz.initialize(graphics, 0, 0, 0, &textures[2]);
+	liz.setScale(0.5);
+	lizard->image = &liz;
+
+	tur.initialize(graphics, 0, 0, 0, &textures[0]);
+	tur.setScale(0.5);
+	turtle->image = &tur;
+
+	din.initialize(graphics, 0, 0, 0, &textures[1]);
+	din.setScale(0.5);
+	dino->image = &din;
 }
 
 int manaOutTimer = 0;
@@ -92,6 +104,11 @@ void GroveMon::update() {
 			index = 0;
 			selected = true;
 			bs->start();
+			bs->getPlayer()->image->setX(10);
+			bs->getPlayer()->image->setY(140);
+
+			bs->getEnemy()->image->setX(340);
+			bs->getEnemy()->image->setY(20);
 		}
 		return;
 	}
@@ -162,6 +179,10 @@ void GroveMon::render()
 	std::stringstream s;
     graphics->spriteBegin();                // begin drawing sprites
 	background.draw();
+
+	bs->getEnemy()->image->draw();
+	bs->getPlayer()->image->draw();
+
 	textBoxBack.draw();
 
 	text.print(bs->getEnemy()->getName(), 0, 0);
@@ -174,7 +195,7 @@ void GroveMon::render()
 	text.print(s.str(), 350, 236);
 	s.str("");
 	s << "Mana: " << bs->getPlayer()->getCurrentMana() << '/' << bs->getPlayer()->getMana();
-	text.print(s.str(), 350, 272);
+	text.print(s.str(), 350, 265);
 
 	text.print(textbox, 40, 300);
 

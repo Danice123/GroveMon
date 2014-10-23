@@ -2,6 +2,7 @@
 #define __Monster_
 #include <vector>
 #include <string>
+#include "image.h"
 
 class Skill;
 
@@ -38,6 +39,8 @@ public:
 
 	void addSkill(Skill*);
 	void addStatusEffect(Skill*);
+
+	Image* image;
 protected:
 	std::string name;
 	type creature_type;

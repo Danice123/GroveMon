@@ -55,9 +55,9 @@ unsigned __stdcall run(void* args) {
 				if (damage < 0) damage = 0;
 				bs->enemy->damageMonster(damage, bs->player->getType());
 
-				s.str("");
+				/*s.str("");
 				s << "The Enemy's " << bs->enemy->getName() << " takes " << damage << " damage!";
-				textOut(bs, lk, s.str());
+				textOut(bs, lk, s.str());*/
 				break;
 			default:
 				Skill* skill = bs->player->getSkills()[c - 2];
@@ -102,9 +102,9 @@ unsigned __stdcall run(void* args) {
 			if (damage < 0) damage = 0;
 			bs->player->damageMonster(damage, bs->enemy->getType());
 
-			s.str("");
+			/*s.str("");
 			s << "The Player's " << bs->player->getName() << " takes " << damage << " damage!";
-			textOut(bs, lk, s.str());
+			textOut(bs, lk, s.str());*/
 
 			std::vector<Skill*>* se = bs->enemy->getStatusEffects();
 			for (auto i = se->begin(); i < se->end(); i++) {

@@ -5,10 +5,11 @@ Wave::Wave()
 	manaCost = 5;
 	turns = 2;
 	name = "Wave";
+	targetsSelf = false;
 }
 
 std::string Wave::describe(Monster* caster) {
-	return "";
+	return caster->getName() + " launches a wave of water at its opponent";
 }
 
 void Wave::apply(Monster* target) {
@@ -17,7 +18,7 @@ void Wave::apply(Monster* target) {
 }
 
 std::string Wave::describeTick(Monster* target) {
-	return "";
+	return target->getName() + " is drowning!";
 }
 
 void Wave::tick(Monster* target) {

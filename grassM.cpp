@@ -19,4 +19,5 @@ void GrassM::damageMonster(int damage, type damagetype)
 		break;
 	}
 
+	if (currentHealth < 0) currentHealth = 0;
 }
