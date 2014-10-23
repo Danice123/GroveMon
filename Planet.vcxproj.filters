@@ -25,6 +25,10 @@
     <ClCompile Include="weaken.cpp" />
     <ClCompile Include="restore.cpp" />
     <ClCompile Include="leafcut.cpp" />
+    <ClCompile Include="Axe Twerk.cpp" />
+    <ClCompile Include="leer.cpp">
+      <Filter>headers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio.h">
@@ -100,6 +104,12 @@
       <Filter>headers</Filter>
     </ClInclude>
     <ClInclude Include="leafcut.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AxeTwerk.h">
+      <Filter>headers</Filter>
+    </ClInclude>
+    <ClInclude Include="leer.h">
       <Filter>headers</Filter>
     </ClInclude>
   </ItemGroup>
